@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.FinTech"
+    tools:context=".Dashboard">
+
+    <Button
+        android:id="@+id/operacaoButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="22dp"
+        android:onClick="abrirActivityOperacao"
+        android:text="Operações"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/extratoButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoText" />
+
+    <Button
+        android:id="@+id/extratoButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="abrirActivityExtrato"
+        android:text="Extrato"
+        app:layout_constraintBottom_toTopOf="@+id/pesquisarButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operacaoButton" />
+
+    <Button
+        android:id="@+id/listaButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="26dp"
+        android:onClick="abrirActivityLista"
+        android:text="Lista Classificada"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pesquisarButton" />
+
+    <Button
+        android:id="@+id/pesquisarButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="23dp"
+        android:onClick="abrirActivityPesquisar"
+        android:text="Pesquisar"
+        app:layout_constraintBottom_toTopOf="@+id/listaButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extratoButton" />
+
+    <ImageView
+        android:id="@+id/logoDashboard"
+        android:layout_width="136dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/FinTechText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/infoText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="37dp"
+        android:backgroundTint="@color/lightgray"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="number"
+        android:text="Escolha a opção desejada."
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/operacaoButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FinTechText" />
+
+    <TextView
+        android:id="@+id/FinTechText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="FinTech"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/infoText"
+        app:layout_constraintEnd_toEndOf="@+id/logoDashboard"
+        app:layout_constraintTop_toBottomOf="@+id/logoDashboard" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
